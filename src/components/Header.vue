@@ -1,9 +1,26 @@
 
 <template>
-  <div>
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/projects">About</router-link>
-    </div>
+  <div class="header">
+    <Title name="John Gannon" title="Web Developer" />
+    <HeroBanner />
+    <NavBar />
   </div>
 </template>
+
+<script>
+import Title from './Title'
+import HeroBanner from './HeroBanner'
+import NavBar from './NavBar'
+
+export default {
+  name: 'Header',
+  components: {
+    Title,
+    HeroBanner,
+    NavBar
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+</style>

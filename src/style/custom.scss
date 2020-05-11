@@ -1,24 +1,42 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import '../../node_modules/bootstrap-vue/src/index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+@import './variables.scss';
+
+body {
+  background-color: $background-color;
+}
 
 #app {
-  font-family: 'Baloo Paaji 2', cursive;;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Baloo Paaji 2', cursive;
+  font-size: 2vw;
+  padding-top: 5%;
 }
 
-#nav {
-  padding: 30px;
+h1 {
+  font-size: $base-font-size;
+  font-weight: 600;
+  color: $primary-text-color;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 600;
+  font-size: $base-font-size / 2;
+  color: $highlite-color;
+}
+h3 {
+  color: $highlite-color;
+}
+h4 {
+  color: $highlite-color;
+}
+p {
+  font-size: $base-font-size / 4;
+}
+p.primary-text {
+  color: $primary-text-color;
+}
+p.secondary-text {
+  color: $secondary-text-color;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
