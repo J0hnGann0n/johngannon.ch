@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-banner">
+  <div class="hero-banner" v-show="showBanner">
     <p class="secondary-text">I wanted this to be an</p>
     <p class="secondary-text"><span class="standout-text">Amazing Banner</span>.</p>
     <p class="secondary-text">But hey,</p>
@@ -11,12 +11,15 @@
 <script>
 
 export default {
-  name: 'HeroBanner'
+  name: 'HeroBanner',
+  props: {
+    showBanner: Boolean
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-  .hero-banner{
+  .hero-banner {
     width: max-content;
     margin: 0 auto;
     font-size: $base-font-size / 2.5;

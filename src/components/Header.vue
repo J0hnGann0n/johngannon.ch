@@ -2,8 +2,8 @@
 <template>
   <div class="header">
     <Title name="John Gannon" title="Web Developer" />
-    <HeroBanner />
-    <NavBar />
+    <HeroBanner :showBanner="showBanner"/>
+    <NavBar :sticky="showBanner"/>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ import NavBar from './NavBar'
 
 export default {
   name: 'Header',
+  data: function () {
+    return {
+      showBanner: true
+    }
+  },
   components: {
     Title,
     HeroBanner,
