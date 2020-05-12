@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <router-link to="/"><SvgUser/></router-link>|
+    <router-link to="/">Home</router-link>|
     <router-link to="/projects">About</router-link>
   </div>
 </template>
