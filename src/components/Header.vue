@@ -1,7 +1,7 @@
 
 <template>
   <div class="header">
-    <Title name="John Gannon" title="Web Developer" />
+    <Title name="John Gannon" title="Web Developer" :showTitle="showBanner" />
     <HeroBanner :showBanner="showBanner"/>
     <NavBar :sticky="showBanner"/>
   </div>

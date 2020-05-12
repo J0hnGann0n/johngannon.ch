@@ -1,7 +1,7 @@
 <template>
   <div class="title">
-    <h1 class="text-center">{{ name }}</h1>
-    <h2 class="text-right">{{ title }}</h2>
+    <h1 class="text-center" :class="{ 'm-0': showTitle }">{{ name }}</h1>
+    <h2 v-if="showTitle" class="text-right">{{ title }}</h2>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
   name: 'Title',
   props: {
     name: String,
-    title: String
+    title: String,
+    showTitle: Boolean
   }
 }
 </script>
@@ -20,8 +21,5 @@ export default {
   .title {
     width: max-content;
     margin: 0 auto;
-    h1 {
-      margin-bottom: 0;
-    }
   }
 </style>
