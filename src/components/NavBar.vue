@@ -1,6 +1,6 @@
 <template>
   <b-container fluid class="nav-bar p-0" :class="{ banner: sticky }">
-    <b-row no-gutters class="h-100">
+    <b-row no-gutters class="nav-bar p-0 h-100">
       <b-col>
         <router-link  tag="span" to="/">
           <button>

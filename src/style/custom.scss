@@ -39,4 +39,16 @@ p.primary-text {
 p.secondary-text {
   color: $secondary-text-color;
 }
+button {
+  border: 0px;
+  border-bottom: 2px solid $background-color-light;
+  background-color: $background-color;
+  color: $secondary-text-color;
+  &:focus {
+    outline: none;
+    border: 0px;
+    background-color: $background-color-light;
+    color: $highlite-color;
+  }
+}
 
