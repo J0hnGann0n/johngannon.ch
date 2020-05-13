@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header />
-    <router-view />
+    <Header v-on:hide-banner="hideBanner()" :showBanner="showBanner" />
+    <router-view :hide="showBanner"/>
   </div>
 </template>
 
@@ -10,8 +10,19 @@ import Header from './components/Header'
 
 export default {
   name: 'App',
+  data: function () {
+    return {
+      showBanner: true
+    }
+  },
   components: {
     Header
+  },
+  methods: {
+    hideBanner () {
+      console.log('hello')
+      this.showBanner = false
+    }
   }
 }
 </script>

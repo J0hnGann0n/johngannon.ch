@@ -3,7 +3,7 @@
   <div class="header">
     <Title name="John Gannon" title="Web Developer" :showTitle="showBanner" />
     <HeroBanner :showBanner="showBanner"/>
-    <NavBar :sticky="showBanner"/>
+    <NavBar v-on:click.native="hideBanner" :sticky="showBanner"/>
   </div>
 </template>
 
@@ -14,15 +14,18 @@ import NavBar from './NavBar'
 
 export default {
   name: 'Header',
-  data: function () {
-    return {
-      showBanner: true
-    }
+  props: {
+    showBanner: Boolean
   },
   components: {
     Title,
     HeroBanner,
     NavBar
+  },
+  methods: {
+    hideBanner () {
+      this.$emit('hide-banner')
+    }
   }
 }
 </script>

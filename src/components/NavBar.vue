@@ -2,7 +2,7 @@
   <b-container fluid class="nav-bar p-0" :class="{ banner: sticky }">
     <b-row no-gutters class="nav-bar p-0 h-100">
       <b-col>
-        <router-link  tag="span" to="/">
+        <router-link tag="span" to="/">
           <button>
             <UserIcon />
           </button>
@@ -41,6 +41,9 @@ export default {
   button {
     width: 100%;
     height: 100%;
+  }
+  button:nth-child(1) {
+    border-right: 2px solid $background-color-light;
   }
   &.banner {
     position: fixed;
