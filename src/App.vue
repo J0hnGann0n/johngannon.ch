@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header v-on:hide-banner="hideBanner()" :showBanner="showBanner" />
+    <Header v-on:show-banner="setBannerState" :showBanner="showBanner" />
     <router-view :hide="showBanner"/>
   </div>
 </template>
@@ -19,9 +19,8 @@ export default {
     Header
   },
   methods: {
-    hideBanner () {
-      console.log('hello')
-      this.showBanner = false
+    setBannerState (showBanner) {
+      this.showBanner = showBanner
     }
   }
 }

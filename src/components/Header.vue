@@ -1,9 +1,18 @@
 
 <template>
   <div class="header">
-    <Title name="John Gannon" title="Web Developer" :showTitle="showBanner" />
-    <HeroBanner class="slider" :class="{ closed: !showBanner }"/>
-    <NavBar v-on:click.native="hideBanner" :sticky="showBanner"/>
+    <Title
+      v-on:click.native="setBanner(true)"
+      name="John Gannon"
+      title="Web Developer"
+      :showTitle="showBanner" />
+    <HeroBanner
+      class="slider"
+      :class="{ closed: !showBanner }"
+      />
+    <NavBar
+      v-on:click.native="setBanner(false)"
+      :sticky="showBanner"/>
   </div>
 </template>
 
@@ -23,8 +32,8 @@ export default {
     NavBar
   },
   methods: {
-    hideBanner () {
-      this.$emit('hide-banner')
+    setBanner (show) {
+      this.$emit('show-banner', show)
     }
   }
 }
