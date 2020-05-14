@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-banner" v-show="showBanner">
+  <div class="hero-banner">
     <p class="secondary-text">I wanted this to be an</p>
     <p class="secondary-text"><span class="standout-text">Amazing Banner</span>.</p>
     <p class="secondary-text">But hey,</p>
