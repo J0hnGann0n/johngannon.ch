@@ -4,6 +4,9 @@ import './registerServiceWorker'
 import router from './router'
 import { BootstrapVue } from 'bootstrap-vue'
 import './style/custom.scss'
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload)
 
 Vue.use(BootstrapVue)
 

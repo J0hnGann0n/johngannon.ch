@@ -1,18 +1,22 @@
 <template>
-  <div class="profile" :class="{ hide: hide }">
-    <p>Profile Page</p>
-  </div>
+  <b-container fluid class="profile nav-bar p-0" :class="{ hide: hide }">
+    <b-row no-gutters class="nav-bar p-0 h-100">
+      <ProfileCard />
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-// @ is an alias to /src
+import ProfileCard from '../components/ProfileCard'
 
 export default {
   name: 'Profile',
   props: {
     hide: Boolean
   },
-  components: {}
+  components: {
+    ProfileCard
+  }
 }
 </script>
 
