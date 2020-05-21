@@ -1,13 +1,26 @@
 <template>
   <b-col>
     <div class="profile-card">
-      <b-media>
+      <b-media vertical-align="top">
         <template v-slot:aside>
-          <img v-lazy="'../assets/me.jpg'" />
+          <div>
+            <img src="../assets/me.jpg" />
+          </div>
+          <div>
+            <button>
+              <UserIcon />
+            </button>
+            <button>
+              <ToolIcon />
+            </button>
+          </div>
         </template>
 
-        <h2>Media Body</h2>
-        <p>Some text</p>
+        <p class="secondary-text">Im just back from a long trip that took
+            me through Europe, Russia, Japan, China,
+            South-East Asia and Australia. Now I am
+            back home in Switzerland in the middle
+            of a pandemic without a job!</p>
 
         <!-- b-[Optional: add media children here for nesting] -->
       </b-media>
@@ -22,4 +35,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 25vw;
+  height: auto;
+}
 </style>

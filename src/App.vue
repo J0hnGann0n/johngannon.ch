@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header v-on:show-banner="setBannerState" :showBanner="showBanner" />
-    <router-view :hide="showBanner"/>
+    <router-view class="main-content" :hide="showBanner"/>
   </div>
 </template>
 

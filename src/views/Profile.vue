@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="profile nav-bar p-0" :class="{ hide: hide }">
-    <b-row no-gutters class="nav-bar p-0 h-100">
+  <b-container fluid class="profile" :class="{ hide: hide }">
+    <b-row>
       <ProfileCard />
     </b-row>
   </b-container>
@@ -23,6 +23,6 @@ export default {
 <style lang="scss" scoped>
   .hide {
     position: fixed;
-    bottom: -50px;
+    bottom: -200px;
   }
 </style>
