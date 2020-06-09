@@ -14,13 +14,13 @@
     <b-row>
       <b-col>
         <h3>Experience</h3>
-        <ExperienceCard :technologies="skills" />
+        <ExperienceCard />
       </b-col>
     </b-row>
     <b-row>
       <b-col>
         <h3>Education</h3>
-        <EducationCard :technologies="skills" />
+        <EducationCard />
       </b-col>
     </b-row>
   </b-container>
@@ -59,5 +59,8 @@ export default {
   .hide {
     position: fixed;
     bottom: -1400px;
+  }
+  .profile .row .col {
+    padding-bottom: 3vh;
   }
 </style>

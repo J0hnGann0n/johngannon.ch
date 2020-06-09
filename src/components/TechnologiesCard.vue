@@ -65,7 +65,7 @@ svg {
 }
 .technologies-card .col {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding: 0px;
 }
 .technologies-card .row:nth-child(even) .col:nth-child(odd) {

@@ -1,24 +1,58 @@
 <template>
-  <div  class="Projects" :class="{ hide: hide }">
-    <p>Projects Page</p>
-  </div>
+  <b-container fluid class="projects" :class="{ hide: hide }">
+    <b-row>
+      <b-col>
+        <h3>Projects</h3>
+        <ProjectsCard v-for="(project, index) in projects" :key="index"
+          :title="project.title"
+          :description="project.description"
+        />
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-// @ is an alias to /src
+import ProjectsCard from '../components/ProjectsCard'
 
 export default {
   name: 'Projects',
+  data: function () {
+    return {
+      projects: [
+        {
+          title: 'Draw Apart',
+          description: `A VueJS web app that emulates the paper based
+                      game called "The Combination Man". In this digital
+                      version the player draws a simple sketch of the
+                      head, body, legs and feet of a human body. Players
+                      can then select a combination of body parts and
+                      vote on each others creations.`
+        },
+        {
+          title: 'Portfolio Page',
+          description: `This website. The goal was to create a very simple
+                        but eye catching page. It wasn't necessary to build
+                        it as a Vue SPA but I wanted something that would
+                        be easy to expand in the future. Eventually I will
+                        add a Django backend just for fun.`
+        }
+      ]
+    }
+  },
   props: {
     hide: Boolean
   },
-  components: {}
+  components: {
+    ProjectsCard
+  }
 }
 </script>
 
 <style lang="scss" scoped>
   .hide {
     position: fixed;
-    bottom: -50px;
+    bottom: -1400px;
   }
+
 </style>

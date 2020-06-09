@@ -30,12 +30,24 @@ h3 {
 h4 {
   color: $highlite-color;
 }
+h5 {
+  font-weight: 600;
+  color: $primary-text-color;
+  font-size: $base-font-size / 3;
+}
+h6 {
+  color: $highlite-color;
+  font-size: $base-font-size / 3;
+}
 p {
   font-size: $base-font-size / 4;
   color: $primary-text-color;
 }
-p.secondary-text {
+.secondary-text {
   color: $secondary-text-color;
+}
+p.bold {
+  font-weight: 600;
 }
 button {
   border: 0px;

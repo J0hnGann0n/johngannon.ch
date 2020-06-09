@@ -2,17 +2,17 @@
   <div class="experience-card">
     <ul class="p-0">
       <li>
-        <p class="experience">
+        <p class="experience bold">
           <span>17 - 19</span><span>Head of Development / </span><span>Gonnado AG</span>
         </p>
       </li>
       <li>
-        <p class="experience">
+        <p class="experience bold">
           <span>16 - 17</span><span>Full Stack Web Developer / </span><span>Gonnado AG</span>
         </p>
       </li>
       <li>
-        <p class="experience">
+        <p class="experience bold">
           <span>05 - 16</span><span>Computer Repair Technician / </span><span>Tellnet</span>
         </p>
       </li>
