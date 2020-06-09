@@ -4,14 +4,14 @@
       <b-col>
         <router-link tag="span" to="/">
           <button>
-            <UserIcon />
+            <User />
           </button>
         </router-link>
       </b-col>
       <b-col>
         <router-link tag="span" to="/projects">
           <button>
-            <ToolIcon />
+            <Tool />
           </button>
         </router-link>
       </b-col>
@@ -20,16 +20,16 @@
 </template>
 
 <script>
-import UserIcon from './svg/UserIcon.svg'
-import ToolIcon from './svg/ToolIcon.svg'
+import User from './svg/User.svg'
+import Tool from './svg/Tool.svg'
 export default {
   name: 'NavBar',
   props: {
     sticky: Boolean
   },
   components: {
-    UserIcon,
-    ToolIcon
+    User,
+    Tool
   }
 }
 </script>

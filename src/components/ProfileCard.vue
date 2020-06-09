@@ -8,10 +8,8 @@
           </div>
           <div>
             <button>
-              <UserIcon />
             </button>
             <button>
-              <ToolIcon />
             </button>
           </div>
         </template>
