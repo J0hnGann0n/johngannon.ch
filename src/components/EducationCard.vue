@@ -22,7 +22,7 @@ import Nginx from './svg/Nginx.svg'
 import Vue from './svg/Vue.svg'
 
 export default {
-  name: 'TechnologiesCard',
+  name: 'EducationCard',
   props: {
     technologies: Array
   },

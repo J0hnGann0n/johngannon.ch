@@ -11,12 +11,26 @@
         <TechnologiesCard :technologies="skills" />
       </b-col>
     </b-row>
+    <b-row>
+      <b-col>
+        <h3>Experience</h3>
+        <ExperienceCard :technologies="skills" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <h3>Education</h3>
+        <EducationCard :technologies="skills" />
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
 <script>
 import ProfileCard from '../components/ProfileCard'
 import TechnologiesCard from '../components/TechnologiesCard'
+import ExperienceCard from '../components/ExperienceCard'
+import EducationCard from '../components/EducationCard'
 
 export default {
   name: 'Profile',
@@ -34,7 +48,9 @@ export default {
   },
   components: {
     ProfileCard,
-    TechnologiesCard
+    TechnologiesCard,
+    ExperienceCard,
+    EducationCard
   }
 }
 </script>
@@ -42,6 +58,6 @@ export default {
 <style lang="scss" scoped>
   .hide {
     position: fixed;
-    bottom: -700px;
+    bottom: -1400px;
   }
 </style>
