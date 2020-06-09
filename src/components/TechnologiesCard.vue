@@ -1,13 +1,12 @@
 <template>
-  <b-col>
-    <div class="technologies-card">
-        <b-row v-for="(group, index) in technologyGroups" :key="index">
-          <b-col v-for="(skill, index) in group" :key="index">
-            <component :is="skill"></component>
-          </b-col>
-        </b-row>
-    </div>
-  </b-col>
+  <div class="technologies-card">
+    <b-row v-for="(group, index) in technologyGroups" :key="index">
+      <b-col class="skill" v-for="(skill, index) in group" :key="index">
+        <component :is="skill"></component>
+        <span> {{skill}} </span>
+      </b-col>
+    </b-row>
+  </div>
 </template>
 
 <script>
@@ -75,5 +74,12 @@ svg {
 .technologies-card .row:nth-child(even) .col:nth-child(even) {
   padding-right: 15vw;
 }
-
+.skill {
+  flex-direction: column;
+  align-items: center;
+  span {
+    color: white;
+    font-size: 1rem;
+  }
+}
 </style>

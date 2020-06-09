@@ -1,10 +1,15 @@
 <template>
   <b-container fluid class="profile" :class="{ hide: hide }">
     <b-row>
-      <ProfileCard />
+      <b-col>
+        <ProfileCard />
+      </b-col>
     </b-row>
     <b-row>
-      <TechnologiesCard :technologies="skills" />
+      <b-col>
+        <h3>Technologies</h3>
+        <TechnologiesCard :technologies="skills" />
+      </b-col>
     </b-row>
   </b-container>
 </template>
