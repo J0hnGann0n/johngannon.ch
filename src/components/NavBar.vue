@@ -39,6 +39,7 @@ export default {
   height: 13vw;
   max-height: 90px;
   button {
+    border-bottom: 2px solid $background-color-light;
     width: 100%;
     height: 100%;
   }

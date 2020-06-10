@@ -6,6 +6,7 @@
         <ProjectsCard v-for="(project, index) in projects" :key="index"
           :title="project.title"
           :description="project.description"
+          :links="project.links"
         />
       </b-col>
     </b-row>
@@ -27,7 +28,17 @@ export default {
                       version the player draws a simple sketch of the
                       head, body, legs and feet of a human body. Players
                       can then select a combination of body parts and
-                      vote on each others creations.`
+                      vote on each others creations.`,
+          links: [
+            {
+              url: 'http://draw-apart.surelookatusnow.ch/',
+              icon: 'play'
+            },
+            {
+              url: 'https://github.com/J0hnGann0n/draw-apart',
+              icon: 'github'
+            }
+          ]
         },
         {
           title: 'Portfolio Page',
@@ -35,7 +46,13 @@ export default {
                         but eye catching page. It wasn't necessary to build
                         it as a Vue SPA but I wanted something that would
                         be easy to expand in the future. Eventually I will
-                        add a Django backend just for fun.`
+                        add a Django backend just for fun.`,
+          links: [
+            {
+              url: 'https://github.com/J0hnGann0n/johngannon.ch',
+              icon: 'github'
+            }
+          ]
         }
       ]
     }
