@@ -2,7 +2,12 @@
   <b-container class="profile" :class="{ hide: hide }">
     <b-row>
       <b-col>
-        <ProfileCard />
+        <Panel
+          :description="profile.description"
+          :links="profile.links"
+          :image="profile.image"
+          :noBorder="true"
+        />
       </b-col>
     </b-row>
     <b-row>
@@ -27,7 +32,7 @@
 </template>
 
 <script>
-import ProfileCard from '../components/ProfileCard'
+import Panel from '../components/Panel'
 import TechnologiesCard from '../components/TechnologiesCard'
 import ExperienceCard from '../components/ExperienceCard'
 import EducationCard from '../components/EducationCard'
@@ -36,6 +41,28 @@ export default {
   name: 'Profile',
   data: function () {
     return {
+      profile: {
+        description: `Im just back from a long trip that took
+          me through Europe, Russia, Japan, China,
+          South-East Asia and Australia. Now I am
+          back home in Switzerland in the middle
+          of a pandemic without a job!`,
+        links: [
+          {
+            url: 'https://www.linkedin.com/in/john-gannon-452556113/',
+            icon: 'linkedin'
+          },
+          {
+            url: 'https://github.com/J0hnGann0n/',
+            icon: 'github'
+          },
+          {
+            url: 'https://surelookatusnow.ch/en/',
+            icon: 'globe'
+          }
+        ],
+        image: require('../assets/me.jpg')
+      },
       skills: [
         'Bash', 'Css', 'Django',
         'Gitlab', 'Html', 'Jquery',
@@ -47,7 +74,7 @@ export default {
     hide: Boolean
   },
   components: {
-    ProfileCard,
+    Panel,
     TechnologiesCard,
     ExperienceCard,
     EducationCard

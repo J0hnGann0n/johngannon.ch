@@ -3,7 +3,7 @@
     <b-row>
       <b-col>
         <h3>Projects</h3>
-        <ProjectsCard v-for="(project, index) in projects" :key="index"
+        <Panel v-for="(project, index) in projects" :key="index"
           :title="project.title"
           :description="project.description"
           :links="project.links"
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import ProjectsCard from '../components/ProjectsCard'
+import Panel from '../components/Panel'
 
 export default {
   name: 'Projects',
@@ -61,7 +61,7 @@ export default {
     hide: Boolean
   },
   components: {
-    ProjectsCard
+    Panel
   }
 }
 </script>

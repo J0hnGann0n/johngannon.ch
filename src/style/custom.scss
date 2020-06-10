@@ -40,7 +40,7 @@ h6 {
   font-size: $base-font-size / 3;
 }
 p {
-  font-size: $base-font-size / 4;
+  font-size: $base-font-size / 3.5;
   color: $primary-text-color;
 }
 .secondary-text {
@@ -65,7 +65,7 @@ button {
   padding: 3vh 3vh 3vh 3vh;
 }
 
-.card-button  {
+.panel-button  {
   border-top: 1px solid $background-color-light;
   border-left: 1px solid $background-color-light;
   button {
@@ -77,7 +77,7 @@ button {
   }
 }
 
-.card-button-group {
+.panel-button-group {
   margin: 0 -1vh 0 -1vh;
 }
 
