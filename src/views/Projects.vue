@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="projects" :class="{ hide: hide }">
+  <b-container class="projects" :class="{ hide: hide }">
     <b-row>
       <b-col>
         <h3>Projects</h3>

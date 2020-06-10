@@ -2,7 +2,7 @@
   <div class="projects-card">
     <h6>{{ title }}</h6>
     <p>{{ description }}</p>
-    <b-row no-gutters class="p-0">
+    <b-row no-gutters class="p-0 m-0">
       <b-col>
         <button>
           <User />

@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="profile" :class="{ hide: hide }">
+  <b-container class="profile" :class="{ hide: hide }">
     <b-row>
       <b-col>
         <ProfileCard />
