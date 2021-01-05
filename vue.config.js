@@ -13,6 +13,13 @@ module.exports = {
       .use('babel-loader')
       .loader('babel-loader')
       .end()
+      .oneOf('inline')
+      .resourceQuery(/inline/)
+      .use('svg-url-loader')
+      .loader('svg-url-loader')
+      .end()
+      .end()
+      .oneOf('external')
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
   }

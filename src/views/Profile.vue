@@ -14,6 +14,11 @@
         <TechnologiesCard :technologies="skills" :isDesktop="isDesktop" />
       </b-col>
       <b-col sm="12" lg="6" class="content-tile">
+        <h3>Skills</h3>
+        <p>Full stack web development, CI/CD, Test Automation, Project management and team leading, SCRUM/Agile, server administration.
+        </p>
+      </b-col>
+      <b-col sm="12" lg="6" class="content-tile">
         <h3>Experience</h3>
         <ExperienceCard />
       </b-col>
@@ -24,6 +29,14 @@
       <b-col sm="12" lg="6" class="content-tile">
         <h3>Info</h3>
         <InfoCard />
+      </b-col>
+      <b-col sm="12" lg="6" class="content-tile">
+        <h3>Profile</h3>
+        <ul class="p-0 links">
+          <li class="secondary-text git">github.com/j0hngann0n</li>
+          <li class="secondary-text blog">surelookatusnow.ch</li>
+          <li class="secondary-text linkedin">linkedin.com/in/john-gannon-452556113/</li>
+        </ul>
       </b-col>
     </b-row>
   </b-container>
@@ -89,4 +102,35 @@ export default {
   .profile .row .col {
     padding-bottom: 3vh;
   }
+
+.links li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: .75em;
+    width: .75em;
+    color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right:0.5em;
+  }
+  &.git {
+    &:before {
+      background-image: url('../components/svg/GithubWhite.svg?inline');
+    }
+  }
+  &.blog {
+    &:before {
+      background-image: url('../components/svg/LinkedinWhite.svg?inline');
+    }
+  }
+  &.linkedin {
+    &:before {
+      background-image: url('../components/svg/Globe.svg?inline');
+    }
+  }
+}
 </style>
