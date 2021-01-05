@@ -67,6 +67,12 @@ p, li {
 p.bold {
   font-weight: 600;
 }
+.router-link-exact-active button {
+  outline: none;
+  border: 0px;
+  background-color: $background-color-light;
+  color: $highlite-color;
+}
 button {
   border: 0px;
   background-color: $background-color;
@@ -110,3 +116,11 @@ ul {
   list-style-type: none;
 }
 
+hr {
+  width: 100%;
+  border-top: 1px solid $secondary-text-color;
+}
+
+.navbar {
+  border-bottom: 2px solid $background-color-light;
+}

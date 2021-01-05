@@ -46,6 +46,9 @@ export default {
     border-bottom: 2px solid $background-color-light;
     width: 100%;
     height: 100%;
+    @media screen and (min-width: 992px) {
+      border-bottom: 0;
+    }
   }
   button:nth-child(1) {
     border-right: 2px solid $background-color-light;

@@ -18,6 +18,7 @@
         <p>Full stack web development, CI/CD, Test Automation, Project management and team leading, SCRUM/Agile, server administration.
         </p>
       </b-col>
+      <hr>
       <b-col sm="12" lg="6" class="content-tile">
         <h3>Experience</h3>
         <ExperienceCard />
@@ -26,6 +27,7 @@
         <h3>Education</h3>
         <EducationCard />
       </b-col>
+      <hr>
       <b-col sm="12" lg="6" class="content-tile">
         <h3>Info</h3>
         <InfoCard />
@@ -102,35 +104,34 @@ export default {
   .profile .row .col {
     padding-bottom: 3vh;
   }
-
-.links li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  &:before {
-    content: '';
-    display: inline-block;
-    height: .75em;
-    width: .75em;
-    color: white;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right:0.5em;
-  }
-  &.git {
+  .links li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     &:before {
-      background-image: url('../components/svg/GithubWhite.svg?inline');
+      content: '';
+      display: inline-block;
+      height: .75em;
+      width: .75em;
+      color: white;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right:0.5em;
+    }
+    &.git {
+      &:before {
+        background-image: url('../components/svg/GithubWhite.svg?inline');
+      }
+    }
+    &.blog {
+      &:before {
+        background-image: url('../components/svg/LinkedinWhite.svg?inline');
+      }
+    }
+    &.linkedin {
+      &:before {
+        background-image: url('../components/svg/Globe.svg?inline');
+      }
     }
   }
-  &.blog {
-    &:before {
-      background-image: url('../components/svg/LinkedinWhite.svg?inline');
-    }
-  }
-  &.linkedin {
-    &:before {
-      background-image: url('../components/svg/Globe.svg?inline');
-    }
-  }
-}
 </style>
