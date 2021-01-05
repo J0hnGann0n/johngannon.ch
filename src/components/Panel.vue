@@ -70,7 +70,10 @@ svg {
   width: 3vh;
 }
 img {
-  width: 20vw;
+  width: 18vw;
   border-radius: 50%;
+  @media screen and (min-width: 992px) {
+    width: 9vw;
+  }
 }
 </style>

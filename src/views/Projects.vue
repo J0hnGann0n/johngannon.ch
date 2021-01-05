@@ -1,9 +1,9 @@
 <template>
-  <b-container class="projects" :class="{ hide: hide }">
+  <b-container fluid class="projects" :class="{ hide: hide }">
+    <h3>Projects</h3>
     <b-row>
-      <b-col>
-        <h3>Projects</h3>
-        <Panel v-for="(project, index) in projects" :key="index"
+      <b-col sm="12" lg="6" v-for="(project, index) in projects" :key="index">
+        <Panel
           :title="project.title"
           :description="project.description"
           :links="project.links"

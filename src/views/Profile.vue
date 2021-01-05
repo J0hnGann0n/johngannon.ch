@@ -1,41 +1,39 @@
 <template>
-  <b-container class="profile" :class="{ hide: hide }">
+  <b-container fluid class="profile" :class="{ hide: hide }">
     <b-row>
-      <b-col>
+      <!-- <b-col sm="12" lg="6">
         <Panel
           :description="profile.description"
           :links="profile.links"
           :image="profile.image"
           :noBorder="true"
         />
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
+      </b-col> -->
+      <b-col sm="12" lg="6" class="content-tile">
         <h3>Technologies</h3>
-        <TechnologiesCard :technologies="skills" />
+        <TechnologiesCard :technologies="skills" :isDesktop="isDesktop" />
       </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
+      <b-col sm="12" lg="6" class="content-tile">
         <h3>Experience</h3>
         <ExperienceCard />
       </b-col>
-    </b-row>
-    <b-row>
-      <b-col>
+      <b-col sm="12" lg="6" class="content-tile">
         <h3>Education</h3>
         <EducationCard />
+      </b-col>
+      <b-col sm="12" lg="6" class="content-tile">
+        <h3>Info</h3>
+        <InfoCard />
       </b-col>
     </b-row>
   </b-container>
 </template>
 
 <script>
-import Panel from '../components/Panel'
 import TechnologiesCard from '../components/TechnologiesCard'
 import ExperienceCard from '../components/ExperienceCard'
 import EducationCard from '../components/EducationCard'
+import InfoCard from '../components/InfoCard'
 
 export default {
   name: 'Profile',
@@ -71,13 +69,14 @@ export default {
     }
   },
   props: {
-    hide: Boolean
+    hide: Boolean,
+    isDesktop: Boolean
   },
   components: {
-    Panel,
     TechnologiesCard,
     ExperienceCard,
-    EducationCard
+    EducationCard,
+    InfoCard
   }
 }
 </script>

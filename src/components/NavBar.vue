@@ -38,6 +38,10 @@ export default {
 .nav-bar {
   height: 13vw;
   max-height: 90px;
+  @media screen and (min-width: 992px) {
+    max-height: 125px;
+    width: 65%;
+  }
   button {
     border-bottom: 2px solid $background-color-light;
     width: 100%;

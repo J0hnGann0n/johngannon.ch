@@ -10,7 +10,10 @@ body {
 #app {
   font-family: 'Baloo Paaji 2', cursive;
   font-size: 2vw;
-  padding-top: 5%;
+  @media screen and (max-width: 992px) {
+    padding-top: 5%;
+  }
+  
 }
 
 h1 {
@@ -18,11 +21,17 @@ h1 {
   font-weight: 600;
   color: $primary-text-color;
   text-transform: uppercase;
+  @media screen and (min-width: 992px) {
+    font-size: $desktop-base-font-size;
+  }
 }
 h2 {
   font-weight: 600;
   font-size: $base-font-size / 2;
   color: $highlite-color;
+  @media screen and (min-width: 992px) {
+    font-size: $desktop-base-font-size / 2;
+  }
 }
 h3 {
   color: $highlite-color;
@@ -34,14 +43,23 @@ h5 {
   font-weight: 600;
   color: $primary-text-color;
   font-size: $base-font-size / 3;
+  @media screen and (min-width: 992px) {
+    font-size: $desktop-base-font-size / 4;
+  }
 }
 h6 {
   color: $highlite-color;
   font-size: $base-font-size / 3;
+  @media screen and (min-width: 992px) {
+    font-size: $desktop-base-font-size / 4;
+  }
 }
 p {
   font-size: $base-font-size / 3.5;
   color: $primary-text-color;
+  @media screen and (min-width: 992px) {
+    font-size: $desktop-base-font-size / 4;
+  }
 }
 .secondary-text {
   color: $secondary-text-color;
@@ -63,6 +81,9 @@ button {
 
 .main-content {
   padding: 3vh 3vh 3vh 3vh;
+  @media screen and (min-width: 992px) {
+    padding: 3vh 26vh 3vh 26vh;
+  }
 }
 
 .panel-button  {
@@ -79,5 +100,13 @@ button {
 
 .panel-button-group {
   margin: 0 -1vh 0 -1vh;
+}
+
+.content-tile {
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
 }
 

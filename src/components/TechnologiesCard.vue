@@ -24,7 +24,8 @@ import Vue from './svg/Vue.svg'
 export default {
   name: 'TechnologiesCard',
   props: {
-    technologies: Array
+    technologies: Array,
+    isDesktop: Boolean
   },
   components: {
     Python,
@@ -42,13 +43,21 @@ export default {
     technologyGroups () {
       const groups = []
       this.technologies.forEach((technology, i) => {
-        const maxRowLength = 3
+        const maxRowLength = this.isDesktop ? 4 : 3
         if (i === 0) return groups.push([technology])
 
-        if (groups[groups.length - 1].length === maxRowLength - ((groups.length + 1) % 2)) {
-          groups.push([technology])
+        if (this.isDesktop) {
+          if (groups[groups.length - 1].length === maxRowLength) {
+            groups.push([technology])
+          } else {
+            groups[groups.length - 1].push(technology)
+          }
         } else {
-          groups[groups.length - 1].push(technology)
+          if (groups[groups.length - 1].length === maxRowLength - ((groups.length + 1) % 2)) {
+            groups.push([technology])
+          } else {
+            groups[groups.length - 1].push(technology)
+          }
         }
       })
       return groups
@@ -68,11 +77,16 @@ svg {
   justify-content: left;
   padding: 0px;
 }
+
 .technologies-card .row:nth-child(even) .col:nth-child(odd) {
-  padding-left: 15vw;
+  @media screen and (max-width: 992px) {
+    padding-left: 15vw;
+  }
 }
 .technologies-card .row:nth-child(even) .col:nth-child(even) {
-  padding-right: 15vw;
+  @media screen and (max-width: 992px) {
+    padding-right: 15vw;
+  }
 }
 .skill {
   flex-direction: column;

@@ -1,6 +1,22 @@
 
 <template>
-  <div class="header">
+  <div v-if="isDesktop" class="header">
+    <b-navbar>
+        <b-collapse id="nav-collapse" is-nav>
+          <NavBar
+            v-on:click.native="setBanner(false)"
+            :showTitle="true" />
+        </b-collapse>
+        <b-navbar-brand href="#">
+          <Title
+            v-on:click.native="setBanner(true)"
+            name="John Gannon"
+            title="Web Developer"
+            :showTitle="showBanner" />
+        </b-navbar-brand>
+      </b-navbar>
+  </div>
+  <div v-else class="header">
     <Title
       v-on:click.native="setBanner(true)"
       name="John Gannon"
@@ -24,7 +40,8 @@ import NavBar from './NavBar'
 export default {
   name: 'Header',
   props: {
-    showBanner: Boolean
+    showBanner: Boolean,
+    isDesktop: Boolean
   },
   components: {
     Title,
@@ -50,5 +67,8 @@ export default {
   }
   .slider.closed {
     max-height: 0;
+  }
+  .navbar {
+    padding: 0;
   }
 </style>
